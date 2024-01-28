@@ -218,6 +218,12 @@
 }
 
 @media screen and (max-width: 800px) {
+
+  .sidebar-icons .selected {
+    display: none;
+  }
+
+
   .sidebar-icons .selected {
     height: 3.5rem;
     width: 3rem;
@@ -299,7 +305,7 @@
     left: 0px;
     z-index: 10;
     border-radius: 0 50px 50px 0;
-    transition: left 0.3s ease-in-out; /* Add transition for the 'left' property */
+    transition: left 0.3s ease-in-out; /* Add transition for the 'left' property */    
   }
 
   .show-burger.show {

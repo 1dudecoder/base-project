@@ -130,10 +130,25 @@ function Dashboard() {
               <p className="base-header">Base</p>
             </div>
 
-            <div className="avator-div">
+            <div className="avator-div" onClick={handleSignout}>
               <img src={bell} alt="bell-icon" />
               <div className="avatar">
                 <img src={avator} alt="avatar-image" />
+              </div>
+
+              <div
+                className={`tool-pick ${
+                  signOut ? "show-signout" : "hide-signout"
+                }`}
+              >
+                <p
+                  onClick={() => {
+                    localStorage.clear("token");
+                    navigator("/");
+                  }}
+                >
+                  sign-Out
+                </p>
               </div>
             </div>
           </div>
@@ -149,7 +164,7 @@ function Dashboard() {
             <p className="base-header">Base</p>
           </div>
 
-          <div className="mob-header">
+          <div className="mob-header ">
             <div className="icons-text">
               <img src={dashlogo} alt="dash-logo" />
               <p className="base-header">Base</p>
