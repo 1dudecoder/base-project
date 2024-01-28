@@ -1,0 +1,75 @@
+import React, { useEffect, useState } from "react";
+import "./DataTable.css"; // Import the CSS file for styling
+import Dropdown from "../common/dropdown/Dropdown";
+import Tags from "../common/tags/Tags";
+
+const DataTable = ({ csvdata }) => {
+  console.log(csvdata, "my-data");
+
+  const [data, setData] = useState([]);
+  const [selecttags, setselectedtags] = useState([]);
+
+  const handleSelect = (id, item) => {
+    let newdata = data.map((d) => {
+      if (item) {
+        if (d.id === id.id) {
+          d["selected tags"] += item;
+          return { ...d };
+        }
+      }
+
+      return d;
+    });
+
+    setData(newdata);
+  };
+
+  useEffect(() => {
+    if (csvdata && csvdata.length > 1) {
+      setData(csvdata);
+    }
+  }, [csvdata]);
+
+  return (
+    <div className="data-table-container">
+      <div className="data-row data-header ">
+        <div className="data-cell first">SL.No</div>
+        <div className="data-cell">Links</div>
+        <div className="data-cell">Prefix</div>
+        <div className="data-cell">Add Tags</div>
+        <div className="data-cell last">Selection Tags</div>
+      </div>
+
+      {data.length &&
+        data.map((row, index) => (
+          <div key={index} className="data-row-down">
+            <div className="data-cell-item first">{row.id}</div>
+
+            <div className="data-cell-item">
+              <a href={row.links} target="_blank" rel="noopener noreferrer">
+                {row.links}
+              </a>
+            </div>
+            <div className="data-cell-item">{row.prefix}</div>
+
+            <div className="data-cell-item">
+              {
+                <Dropdown
+                  myoptions={row["select tags"]}
+                  setselectedtags={setselectedtags}
+                  selecttags={selecttags}
+                  handleSelect={handleSelect}
+                  id={row}
+                />
+              }
+            </div>
+            <div className="data-cell-item last">
+              <Tags tag={row["selected tags"]} />
+            </div>
+          </div>
+        ))}
+    </div>
+  );
+};
+
+export default DataTable;

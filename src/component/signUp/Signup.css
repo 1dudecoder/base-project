@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400&family=Montserrat:ital,wght@0,400;1,200&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+.top-div {
+  display: none;
+}
+
+.home-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: #f8faff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-div {
+  height: 100vh;
+  width: 50vw;
+  overflow: hidden;
+}
+
+.left-div {
+  height: 100vh;
+  width: 50vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.left-div img {
+  height: 100%;
+  width: 100%;
+}
+
+.right-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 7px;
+}
+
+.subheading {
+  color: #000;
+  font-family: Lato;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 1rem;
+}
+
+.auth-container {
+  width: 26.415rem;
+}
+
+.sign-button {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.sign-button div {
+  height: 2rem;
+}
+
+.sign-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  border-radius: 20px;
+  background: f5f5f5;
+  padding: 1.5rem;
+}
+
+.inputs {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background: #f5f5f5;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  margin-top: 7px;
+}
+
+.inputs input {
+  width: 100%;
+  outline: none;
+  border: none;
+  background: #f5f5f5;
+}
+
+.sign-btn {
+  background: #605bff;
+  width: 100%;
+  padding-block: 9.88px;
+  text-align: center;
+  color: #fff;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 10px;
+  margin-top: 21px;
+}
+
+.sign-btn p {
+  color: #fff;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.btn-sign {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #ffffff;
+  padding-inline: 21px;
+  border-radius: 10px;
+  padding-block: 7.8px;
+
+  color: var(--Secondary-Text, #858585);
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.btn-sign img {
+  margin-right: 7.8px;
+}
+
+.forget-pass,
+.registor-text {
+  color: #605bff;
+}
+
+.registor {
+  margin-top: 21px;
+  color: #858585;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.logo {
+  position: absolute;
+  top: 3%;
+  left: 4%;
+}
+
+.down-icons {
+  display: none;
+}
+
+.zip {
+  position: absolute;
+  top: 1.7rem;
+  width: 100%;
+}
+
+.base-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  font-size: 1.2rem;
+}
+
+.base-header-text {
+  font-size: 72px;
+  position: absolute;
+  top: 45%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.social-media-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 10%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.social-media-icons img {
+  padding-inline: 1rem;
+}
+
+.base-text {
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  .left-div {
+    display: none;
+  }
+
+  .right-div {
+    width: 100%;
+  }
+
+  .home-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .top-div {
+    display: flex;
+    width: 100%;
+    background: #605bff;
+    height: 80px;
+  }
+
+  .logo {
+    height: 26px;
+    width: 25.99px;
+    top: 27px;
+    left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo img {
+    height: 26px;
+    width: 25.99px;
+  }
+
+  .zip {
+    top: 0;
+    display: flex;
+    text-align: center;
+  }
+
+  .base-text {
+    display: flex;
+    color: white;
+    padding-inline: 0.4rem;
+    padding-top: 0.1rem;
+    font-size: 1.3rem;
+  }
+
+  .down-icons {
+    display: block;
+    filter: invert(55%) sepia(7%) saturate(17%) hue-rotate(37deg)
+      brightness(94%) contrast(84%);
+  }
+
+  .down-icons img {
+    height: 28px;
+    padding-inline: 12px;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .auth-container {
+    width: 90%;
+  }
+
+  .heading {
+    font-size: 24px;
+  }
+
+  .subheading {
+    font-size: 12px;
+  }
+
+  .btn-sign {
+    font-size: 12px;
+    padding-inline: 15px;
+  }
+
+  .sign-box {
+    font-size: 16px;
+    padding: 20px;
+  }
+
+  .registor {
+    font-size: 16px;
+  }
+
+  .forget-pass {
+    font-size: 16px;
+  }
+
+  .registor-text {
+    display: block;
+  }
+
+  .registor {
+    text-align: center;
+  }
+
+  .down-icons {
+    display: block;
+    filter: invert(55%) sepia(7%) saturate(17%) hue-rotate(37deg)
+      brightness(94%) contrast(84%);
+  }
+
+  .down-icons img {
+    height: 28px;
+    padding-inline: 12px;
+    margin-top: 1rem;
+  }
+}

@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Montserrat:ital,wght@0,400;1,200&family=Nunito+Sans:opsz,wght@6..12,300&family=Nunito:ital,wght@0,200;1,300&display=swap");
+
+.cust-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 38px;
+}
+
+.cust-btn p {
+  padding-left: 1rem;
+  color: #9a9aa9;
+  font-family: Nunito;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}

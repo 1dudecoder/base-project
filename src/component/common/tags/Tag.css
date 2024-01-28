@@ -1,0 +1,14 @@
+.tags-item {
+  display: flex;
+  background: #605bff;
+  color: white;
+  align-items: center;
+  width: fit-content;
+  padding: 0.2rem;
+  justify-content: center;
+  margin-right: 0.2rem;
+  border-radius: 10px;
+  padding-inline: 0.5rem;
+  height: 2rem;
+  margin-top: 0.2rem;
+}

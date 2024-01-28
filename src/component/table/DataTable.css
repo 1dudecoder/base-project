@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300&display=swap");
+
+* {
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Figtree;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; 
+}
+
+.data-table-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.data-row {
+  display: flex;
+}
+
+.data-row-down {
+  display: flex;
+  margin-block: 0.5rem;
+}
+
+.data-cell {
+  flex: 1;
+  padding: 0.5rem;
+}
+
+.data-header {
+  font-weight: bold;
+}
+
+.data-cell-item {
+  flex: 1;
+  background-color: white;
+  padding-inline: 0.2rem;
+  padding-block: 0.5rem;
+  text-align: start;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 12px;
+}
+
+.first {
+  border-radius: 10px 0px 0px 10px;
+  padding-left: 1rem;
+  flex: 0.5;
+}
+
+.last {
+  border-radius: 0px 10px 10px 0px;
+  flex: 1.5;
+  overflow: auto;
+  width: 10rem;
+  max-height: 5rem;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
