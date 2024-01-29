@@ -24,7 +24,6 @@ function Signup() {
   const [errorstatus, setErrorstatus] = useState("");
 
   const handleSignUp = async () => {
-    console.log(email, pass, "---->");
 
     try {
       if (pass == cpass) {
@@ -128,7 +127,7 @@ function Signup() {
           {status && <p style={{ color: "green" }}>{status}</p>}
 
           <p className="registor">
-            <Link to={"/"}>
+            <Link to={"/"} style={{ textDecoration: "none" }}>
               <span className="registor-text">Go to Login page</span>
             </Link>
           </p>

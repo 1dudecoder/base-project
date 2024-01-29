@@ -144,10 +144,14 @@
   color: var(--Secondary-Text, #858585);
   text-align: center;
   font-family: Montserrat;
-  font-size: 12px;
+  font-size: 12px !important;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.btn-sign p {
+  font-size: 12px;
 }
 
 .btn-sign img {
@@ -338,4 +342,12 @@
     padding-inline: 12px;
     margin-top: 1rem;
   }
+}
+
+@media screen and (max-width: 360px) {
+
+  .auth-container{
+    width: 96%;
+  }
+
 }

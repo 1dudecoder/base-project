@@ -3,11 +3,12 @@
   padding-inline: 0.4rem;
   justify-content: space-around;
   border: 1px solid;
-  padding-block: 0.5rem;
+  padding-block: 0.2rem;
   border-radius: 10px;
   color: #231f20;
   align-items: center;
   position: relative;
+  width: 8rem;
 }
 
 .dropdown-items {

@@ -4,7 +4,6 @@ import Dropdown from "../common/dropdown/Dropdown";
 import Tags from "../common/tags/Tags";
 
 const DataTable = ({ csvdata }) => {
-  console.log(csvdata, "my-data");
 
   const [data, setData] = useState([]);
   const [selecttags, setselectedtags] = useState([]);
@@ -13,14 +12,24 @@ const DataTable = ({ csvdata }) => {
     let newdata = data.map((d) => {
       if (item) {
         if (d.id === id.id) {
-          d["selected tags"] += item;
+          d["selected tags"] += item + ",";
           return { ...d };
         }
       }
-
       return d;
     });
+    setData(newdata);
+  };
 
+  const handleTagsDelete = (text, id) => {
+    let newdata = data.map((item) => {
+      if (item.id === id) {
+        const resultString = item["selected tags"].replace(text + ",", "");
+        item["selected tags"] = resultString;
+        return item;
+      }
+      return item;
+    });
     setData(newdata);
   };
 
@@ -28,7 +37,7 @@ const DataTable = ({ csvdata }) => {
     if (csvdata && csvdata.length > 1) {
       setData(csvdata);
     }
-  }, [csvdata]);
+  }, [csvdata, data]);
 
   return (
     <div className="data-table-container">
@@ -64,7 +73,11 @@ const DataTable = ({ csvdata }) => {
               }
             </div>
             <div className="data-cell-item last">
-              <Tags tag={row["selected tags"]} />
+              <Tags
+                handleTagsDelete={handleTagsDelete}
+                id={row.id}
+                tag={row["selected tags"]}
+              />
             </div>
           </div>
         ))}

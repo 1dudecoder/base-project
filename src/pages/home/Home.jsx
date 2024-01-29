@@ -3,7 +3,11 @@ import { Link, useNavigate } from "react-router-dom";
 import "./Home.css";
 
 import { auth, provider } from "../../firebase";
-import { signInWithEmailAndPassword, signInWithPopup, signInWithRedirect } from "firebase/auth";
+import {
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  signInWithRedirect,
+} from "firebase/auth";
 
 import leftside from "../../assets/leftside.png";
 import apple from "../../assets/apple.svg";
@@ -26,8 +30,6 @@ function Home() {
     try {
       let data = await signInWithPopup(auth, provider);
       let auth2 = data.user.accessToken;
-
-      console.log(auth2, "Setdata---");
       localStorage.setItem("token", auth2);
       navigate("/dashboard");
     } catch (error) {
@@ -137,7 +139,7 @@ function Home() {
 
           <p className="registor">
             Don’t have an account?{" "}
-            <Link to={"/signup"}>
+            <Link to={"/signup"} style={{ textDecoration: "none" }}>
               <span className="registor-text">Register here</span>
             </Link>
           </p>

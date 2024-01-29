@@ -218,11 +218,9 @@
 }
 
 @media screen and (max-width: 800px) {
-
   .sidebar-icons .selected {
     display: none;
   }
-
 
   .sidebar-icons .selected {
     height: 3.5rem;
@@ -305,14 +303,12 @@
     left: 0px;
     z-index: 10;
     border-radius: 0 50px 50px 0;
-    transition: left 0.3s ease-in-out; /* Add transition for the 'left' property */    
+    transition: left 0.3s ease-in-out;
   }
 
   .show-burger.show {
-    left: -300px; /* Slide to the left by 200px when the 'show' class is added */
+    left: -300px;
   }
-
- 
 
   .header {
     display: none;
@@ -361,7 +357,6 @@
 }
 
 @media screen and (max-width: 700px) {
-
   .data-table-container {
     overflow: hidden;
     display: flex;

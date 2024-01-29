@@ -4,27 +4,19 @@ import "./Dropdown.css";
 const NormalDropdown = ({
   myoptions,
   handleSelect,
-  setselectedtags,
-  selecttags,
   id,
 }) => {
   const [show, setShow] = useState(true);
   const [options, setOptions] = useState([]);
 
   useEffect(() => {
-    console.log(options, "options---");
     if (myoptions && myoptions.length > 1) {
       setOptions(myoptions.split(","));
     }
   }, [myoptions]);
 
-  // const handleSelect = (item) => {
-  //   console.log(item);
-  //   setShow(!show);
-  // };
 
   const handleClick = (e) => {
-    console.log(show, "myshow--");
     setShow(!show);
   };
 
@@ -61,7 +53,7 @@ const NormalDropdown = ({
                       handleSelect(id, item);
                     }}
                   >
-                    <p>{item}</p>
+                    <p style={{wordWrap:'normal'}}>{item}</p>
                   </div>
                 </>
               );
